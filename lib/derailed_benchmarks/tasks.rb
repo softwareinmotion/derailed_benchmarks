@@ -89,7 +89,7 @@ namespace :perf do
 
       def call_app
         response = @app.get(PATH_TO_HIT)
-        raise "Bad request: #{ response.body }" unless response.status == 200
+        raise "Bad request: #{ response.body }" unless response.status == 200 || 302
         response
       end
     end
